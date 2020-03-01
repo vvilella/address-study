@@ -1,0 +1,24 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://mongodb/addressapp
+      database: addressapp
+      host: mongodb
+      port: 27017
+  datasource:
+    driverClassName: MongoDB
+
+logging:
+  level:
+    .: error
+    org:
+      springframework.data: debug
+
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: "*"
